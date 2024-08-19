@@ -16,6 +16,7 @@ const heartRateRoutes = require("./src/routes/heartRateRoutes.js");
 const bodyTempRoutes = require("./src/routes/bodyTempRoutes.js");
 const ecgRoutes = require("./src/routes/ecgRoutes.js");
 const verificationRoutes = require("./src/routes/verificationRoutes.js");
+const qrCodeRoutes = require("./src/routes/qrCodeRoutes.js");
 
 dotenv.config();
 const app = express();
@@ -70,6 +71,7 @@ app.use("/api/heart-rate", heartRateRoutes);
 app.use("/api/body-temp", bodyTempRoutes);
 app.use("/api/ecg", ecgRoutes);
 app.use("/api/", verificationRoutes);
+app.use("/api/", qrCodeRoutes);
 
 app.listen(PORT, () => {
   console.log(`app running on port ${PORT}`);
