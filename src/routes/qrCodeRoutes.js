@@ -3,7 +3,7 @@ const router = express.Router();
 const { generateQR } = require("../controllers/qrFunctioalityController");
 const { linkFamilyMember } = require("../controllers/userPatientControllers");
 
-router.post('/generateQr/:userId', generateQR)
+router.post('/generateQr/:patientId', generateQR)
 router.post('/scanToLink', linkFamilyMember)
 
 module.exports = router;
